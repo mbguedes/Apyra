@@ -18,7 +18,7 @@
         <img
           src="/logo.png"
           alt="Apyra Digital"
-          class="h-16 md:h-20 mx-auto filter drop-shadow-[0_0_20px_rgba(217,255,46,0.3)]"
+          class="h-32 md:h-40 mx-auto filter drop-shadow-[0_0_40px_rgba(217,255,46,1.5)]"
         />
       </div>
 
@@ -26,7 +26,7 @@
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up opacity-0 delay-100">
         <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
         <span class="text-xs md:text-sm text-gray-300 tracking-wider uppercase font-medium">
-          +10 anos de expertise em grandes agências
+          +10 anos de expertise em grandes agências - para o topo!
         </span>
       </div>
 
@@ -72,7 +72,7 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in opacity-0 delay-600">
+    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 animate-fade-in opacity-0 delay-600">
       <div class="w-6 h-10 rounded-full border-2 border-gray-600 flex items-start justify-center p-1.5">
         <div class="w-1.5 h-3 bg-primary rounded-full animate-bounce"></div>
       </div>
