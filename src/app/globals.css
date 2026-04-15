@@ -1,0 +1,56 @@
+:root {
+  --bg-primary: rgba(10, 14, 20, 0.4); /* Fundo translúcido para as seções */
+  --bg-secondary: rgba(15, 21, 30, 0.6); /* Fundo um pouco mais escuro/translúcido para as seções */
+  --text-primary: #ffffff;
+  --text-secondary: #8E9297; /* Cinza Titânio */
+  
+  /* Accent colors */
+  --accent-primary: #CCFF00; /* Verde Cripto */
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #0A0E14; /* Azul Abissal puro como base */
+  /* Aplicamos um gradiente extremamente escuro sobre as estrelas para que elas sejam apenas uma textura super leve */
+  background-image: linear-gradient(rgba(10, 14, 20, 0.95), rgba(10, 14, 20, 0.99)), url('/stars-bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .syne-font {
+  font-family: var(--font-syne), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
