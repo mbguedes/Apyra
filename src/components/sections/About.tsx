@@ -66,8 +66,8 @@ export function About() {
                   <h3 className={styles.blockTitle}>Experiência Global</h3>
                   <p className={styles.blockDesc}>
                     Fundada por Stefan Fagury e Márcio B. Guedes, com bagagem na gestão de contas globais. 
-                    Somos a consultoria que transforma orçamentos em vértices de crescimento, convertendo 
-                    cada centavo em lucratividade.
+                    Somos uma Solução que transforma dados em resultados de forma multidisciplinar, transformando 
+                    investimentos em resultados reais.
                   </p>
                 </div>
               </div>

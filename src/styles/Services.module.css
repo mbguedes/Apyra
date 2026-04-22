@@ -28,32 +28,26 @@
   line-height: 1.6;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-}
-
-@media (min-width: 993px) {
-  .card:last-child {
-    grid-column: 2;
-  }
-}
-
-@media (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.circle {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin: 120px auto 0;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.02);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  transform:
+    translateX(-50%)
+    translateY(-50%)
+    rotate(var(--angle))
+    translateX(var(--radius))
+    rotate(calc(-1 * var(--angle)));
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius-md);
   padding: var(--spacing-md);
@@ -64,13 +58,40 @@
   text-align: center;
   gap: var(--spacing-sm);
   cursor: pointer;
+  z-index: 2;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(204, 255, 0, 0.3);
-  transform: translateY(-5px);
+  transform:
+    translateX(-50%)
+    translateY(-50%)
+    rotate(var(--angle))
+    translateX(var(--radius))
+    rotate(calc(-1 * var(--angle)))
+    translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  .circle {
+    width: 100%;
+    height: auto;
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  .card {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .iconWrapper {

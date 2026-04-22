@@ -1,26 +1,11 @@
 import styles from "../../styles/Services.module.css";
 
 const servicesData = [
-  {
-    title: "Gestão de Tráfego",
-    description: "Anúncios otimizados em Google, Meta, TikTok e LinkedIn Ads para maximizar seu ROAS com precisão cirúrgica.",
-    icon: "📈"
-  },
-  {
-    title: "Branding & Design",
-    description: "Criamos identidades visuais memoráveis e interfaces envolventes que transmitem a essência da sua marca.",
-    icon: "✨"
-  },
-  {
-    title: "SEO Estratégico",
-    description: "Posicione sua empresa no topo das buscas do Google e atraia tráfego orgânico altamente qualificado.",
-    icon: "🎯"
-  },
-  {
-    title: "Social Media",
-    description: "Estratégia de conteúdo inteligente para redes sociais que gera engajamento e constrói comunidade.",
-    icon: "📱"
-  }
+  { title: "Gestão de Mídia Full Funnel", description: "Programática (Display, Vídeo, Native, Áudio, CTV), Social Ads e DOOH integrados para cobrir cada etapa da jornada do consumidor.", icon: "📈", angle: -90 },
+  { title: "Branding & Design", description: "Criamos identidades visuais memoráveis e interfaces envolventes que transmitem a essência da sua marca.", icon: "✨", angle: -18 },
+  { title: "Data", description: "Dashboards, analytics avançado e Business Intelligence para transformar dados brutos em decisões estratégicas e vantagem competitiva.", icon: "📊", angle: 54 },
+  { title: "Auditoria de Contas", description: "Diagnóstico completo das suas campanhas e presença digital para elevar sua Maturidade Digital e maximizar o retorno sobre investimento.", icon: "🔍", angle: 126 },
+  { title: "Desenvolvimento Web", description: "Sites e plataformas desenvolvidos sob medida — cada projeto tratado como peça exclusiva, com código limpo, performance irrepreensível e design que comunica autoridade.", icon: "💎", angle: 198 }
 ];
 
 export function Services() {
@@ -34,9 +19,13 @@ export function Services() {
           </p>
         </div>
         
-        <div className={styles.grid}>
+        <div className={styles.circle}>
           {servicesData.map((service, index) => (
-            <div key={index} className={styles.card}>
+            <div 
+              key={index} 
+              className={styles.card}
+              style={{ '--angle': `${service.angle}deg`, '--radius': '340px' } as React.CSSProperties}
+            >
               <div className={styles.iconWrapper}>
                 <span className={styles.icon}>{service.icon}</span>
               </div>

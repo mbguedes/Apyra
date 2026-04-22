@@ -43,7 +43,11 @@ export function Header() {
         
         <div className={styles.actions}>
           <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.cta}>
-            Fale Conosco
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Faça Apyra agora!
           </a>
           
           {/* Hamburger Menu Button */}
@@ -65,7 +69,13 @@ export function Header() {
           <Link href="#sobre" className={styles.mobileLink} onClick={closeMenu}>Sobre</Link>
           <Link href="#servicos" className={styles.mobileLink} onClick={closeMenu}>Serviços</Link>
           <Link href="#diferenciais" className={styles.mobileLink} onClick={closeMenu}>Diferenciais</Link>
-          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={closeMenu}>Fale Conosco</a>
+          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={closeMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Faça Apyra agora!
+          </a>
         </nav>
       </div>
     </header>
