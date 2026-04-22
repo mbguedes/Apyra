@@ -6,13 +6,10 @@ export function Experience() {
       <div className={styles.container}>
         <p className={styles.label}>Bagagem de gestão em marcas globais como</p>
         <div className={styles.brands}>
-          <span className={styles.brand}>Amazon</span>
-          <span className={styles.separator}>|</span>
-          <span className={styles.brand}>Reckitt</span>
-          <span className={styles.separator}>|</span>
-          <span className={styles.brand}>Renault</span>
-          <span className={styles.separator}>|</span>
-          <span className={styles.brand}>Sanofi</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className={styles.brandImg} />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Reckitt_logo.svg" alt="Reckitt" className={styles.brandImg} />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Renault_2021_Text.svg" alt="Renault" className={styles.brandImg} />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Sanofi_logo_%282022%29.svg" alt="Sanofi" className={styles.brandImg} />
         </div>
       </div>
     </section>
