@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "../../styles/Services.module.css";
 
 const servicesData = [
@@ -9,17 +12,26 @@ const servicesData = [
 ];
 
 export function Services() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section id="servicos" className={styles.services}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>Expertise Digital</h2>
-          <p className={styles.subtitle}>
-            Soluções completas para posicionar, escalar e consolidar sua marca.
-          </p>
-        </div>
-        
-        <div className={styles.circle}>
+        <div 
+          className={`${styles.circle} ${isExpanded ? styles.expanded : ""}`}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {/* Cover Header/Explainer acting as the top deck card */}
+          <div className={styles.explainerCard}>
+            <h2 className={styles.explainerTitle}>Expertise Digital</h2>
+            <p className={styles.explainerSubtitle}>
+              Soluções completas para posicionar, escalar e consolidar sua marca.
+            </p>
+            <span className={styles.clickHint}>
+              {isExpanded ? "Voltar ao Início ✕" : "Clique para descobrir ✦"}
+            </span>
+          </div>
+
           {servicesData.map((service, index) => (
             <div 
               key={index} 

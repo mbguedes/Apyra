@@ -9,30 +9,26 @@
   padding: 0 var(--spacing-md);
 }
 
-.header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto var(--spacing-lg);
-}
-
-.title {
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-sm);
-}
-
-.subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+/* Removed static header styles */
 
 .circle {
   position: relative;
   width: 100%;
   height: 800px;
-  margin: 120px auto 0;
+  margin: 60px auto 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 1.3s ease-out;
+}
+
+.circle:not(.expanded) {
+  transform: perspective(1000px) rotateX(20deg) scale(0.9);
+}
+
+.circle.expanded {
+  transform: perspective(1000px) rotateX(0deg) scale(1);
+  cursor: default;
 }
 
 .card {
@@ -40,30 +36,114 @@
   top: 50%;
   left: 50%;
   width: 280px;
+  opacity: 0;
+  pointer-events: none;
+  /* Collapsed state transforms */
   transform:
     translateX(-50%)
     translateY(-50%)
-    rotate(var(--angle))
-    translateX(var(--radius))
-    rotate(calc(-1 * var(--angle)));
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+    rotate(0deg)
+    translateX(0px)
+    translateZ(-50px);
+  background: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-md);
-  padding: var(--spacing-md);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: var(--spacing-sm);
-  cursor: pointer;
   z-index: 2;
 }
 
+.circle.expanded .card {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: default;
+  /* Expanded radial transforms */
+  transform:
+    translateX(-50%)
+    translateY(-50%)
+    rotate(var(--angle))
+    translateX(var(--radius))
+    rotate(calc(-1 * var(--angle)))
+    translateZ(0px);
+}
+
+/* The Cover Card */
+.explainerCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(40px);
+  width: 450px;
+  padding: 4rem 3rem;
+  background: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(204, 255, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  z-index: 10;
+  transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.circle.expanded .explainerCard {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) translateZ(100px) scale(1.1);
+}
+
+.explainerTitle {
+  font-family: var(--font-syne), sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.explainerSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.clickHint {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  border-radius: 100px;
+  animation: pulseHint 2s infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes pulseHint {
+  0% { opacity: 0.6; box-shadow: 0 0 0 rgba(204, 255, 0, 0); }
+  50% { opacity: 1; box-shadow: 0 0 15px rgba(204, 255, 0, 0.2); }
+  100% { opacity: 0.6; box-shadow: 0 0 0 rgba(204, 255, 0, 0); }
+}
+
 .card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(204, 255, 0, 0.3);
+  background: rgba(204, 255, 0, 0.02);
+  border-color: rgba(204, 255, 0, 0.6);
   transform:
     translateX(-50%)
     translateY(-50%)
@@ -71,26 +151,57 @@
     translateX(var(--radius))
     rotate(calc(-1 * var(--angle)))
     translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(204, 255, 0, 0.15);
   z-index: 3;
 }
 
 @media (max-width: 1024px) {
   .circle {
     width: 100%;
+    min-height: 400px;
     height: auto;
     margin-top: var(--spacing-xl);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-md);
+    transform: none !important;
+    perspective: none;
   }
+  
+  .explainerCard {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none !important;
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  
+  .circle.expanded .explainerCard {
+    display: none;
+  }
+
   .card {
     position: static;
     width: 100%;
-    transform: none;
+    transform: translateY(20px);
+    opacity: 0;
+    display: none;
+    transition: all 0.5s ease-out;
   }
-  .card:hover {
+  
+  .circle.expanded .card {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .circle.expanded .card:hover {
     transform: translateY(-5px);
+    background: rgba(204, 255, 0, 0.02);
+    border-color: rgba(204, 255, 0, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(204, 255, 0, 0.15);
   }
 }
 
