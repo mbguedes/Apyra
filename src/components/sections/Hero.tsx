@@ -7,8 +7,7 @@ export function Hero() {
       <div className={styles.backgroundGlow}></div>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.badge}>
-            <span className={styles.dot}></span>
+          <div className={styles.kicker}>
             Agência de Performance Digital
           </div>
           <h1 className={styles.title}>

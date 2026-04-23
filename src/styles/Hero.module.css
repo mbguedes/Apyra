@@ -40,26 +40,15 @@
   animation: fadeUp 1s ease-out forwards;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  backdrop-filter: blur(8px);
-}
-
-.badge .dot {
-  width: 8px;
-  height: 8px;
-  background: var(--accent-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-primary);
+.kicker {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: -0.5rem;
+  text-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
 }
 
 .title {
