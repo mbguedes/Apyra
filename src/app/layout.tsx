@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Especialistas em Marketing Digital, Gestão de Tráfego, Branding e Performance.",
 };
 
+import { CookieConsent } from "../components/layout/CookieConsent";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${syne.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }
