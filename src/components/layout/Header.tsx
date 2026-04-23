@@ -28,10 +28,10 @@ export function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/" onClick={closeMenu}>
+          <a href="/" onClick={closeMenu}>
             <span className={styles.apyra}>Apyra</span>
             <span className={styles.dot}>.</span>
-          </Link>
+          </a>
         </div>
         
         {/* Desktop Nav */}

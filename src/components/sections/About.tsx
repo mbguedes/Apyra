@@ -20,17 +20,10 @@ export function About() {
               {/*<span className={styles.imageBadge}>Fundadores</span>*/}
             </div>
             
-            {/* Stats overlapping or directly below to give context to the 'Data Driven' image */}
-            <div className={styles.statsCard}>
-              <div className={styles.statBox}>
-                <span className={styles.statNumber}>+150</span>
-                <span className={styles.statLabel}>Projetos Entregues</span>
-              </div>
-              <div className={styles.divider}></div>
-              <div className={styles.statBox}>
-                <span className={styles.statNumber}>98%</span>
-                <span className={styles.statLabel}>Retenção de Clientes</span>
-              </div>
+            {/* Floating Brand Logo overlapping the image */}
+            <div className={styles.brandCard}>
+              <span className={styles.apyraText}>Apyra</span>
+              <span className={styles.dotText}>.</span>
             </div>
           </div>
 
