@@ -10,14 +10,14 @@ export function About() {
           <div className={styles.visualColumn}>
             <div className={styles.imagePlaceholder}>
               <Image 
-                src="/dashboard-ui.png" 
-                alt="Dashboard visual de performance data-driven"
+                src="/founders.jpg" 
+                alt="Stefan Fagury e Márcio B. Guedes - Fundadores da Apyra"
                 fill
                 className={styles.realImage}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className={styles.overlay}></div>
-              <span className={styles.imageBadge}>Data Driven</span>
+              {/*<span className={styles.imageBadge}>Fundadores</span>*/}
             </div>
             
             {/* Stats overlapping or directly below to give context to the 'Data Driven' image */}
