@@ -8,7 +8,7 @@ export function Hero() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.kicker}>
-            Agência de Performance Digital
+            | Suporte flexível e transparente |
           </div>
           <h1 className={styles.title}>
             Escale o seu crescimento de forma <span className={styles.highlight}>estratégica</span> e sustentável.
