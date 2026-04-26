@@ -10,8 +10,8 @@ export function About() {
           <div className={styles.visualColumn}>
             <div className={styles.imagePlaceholder}>
               <Image 
-                src="/founders.jpg" 
-                alt="Stefan Fagury e Márcio B. Guedes - Fundadores da Apyra"
+                src="/founders.jpg"
+                alt="Stefan Fagury e Márcio B. Guedes - Fundadores da Octant"
                 fill
                 className={styles.realImage}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -22,7 +22,7 @@ export function About() {
             
             {/* Floating Brand Logo overlapping the image */}
             <div className={styles.brandCard}>
-              <span className={styles.apyraText}>Apyra</span>
+              <span className={styles.octantText}>Octant</span>
               <span className={styles.dotText}>.</span>
             </div>
           </div>
@@ -35,20 +35,19 @@ export function About() {
                 <span className={styles.highlight}>Acreditamos na Engenharia da Performance.</span>
               </h2>
               <p className={styles.leadDescription}>
-                No universo digital, os dados são como uma montanha de informações brutas. 
-                Muitas vezes sem formato, são apenas volume. A Apyra existe para lapidar 
-                essa informação e desenhar o caminho ao topo.
+                No universo digital, navegar sem direção é apenas desperdiçar velocidade.
+                A Octant existe para determinar sua posição exata no mercado e traçar o
+                rumo mais eficiente até os resultados que a sua marca merece.
               </p>
             </div>
 
             <div className={styles.storyBlocks}>
               <div className={styles.storyBlock}>
-                <div className={styles.blockIcon}>⛰️</div>
+                <div className={styles.blockIcon}>🧭</div>
                 <div className={styles.blockText}>
-                  <h3 className={styles.blockTitle}>O Significado de Apyra</h3>
+                  <h3 className={styles.blockTitle}>O Significado de Octant</h3>
                   <p className={styles.blockDesc}>
-                    Do Tupi, significa <strong>vértice</strong>: o ponto onde as linhas se encontram e formam o cume. Em um anúncio, 
-                    é o encontro exato entre estratégia de alto nível, a ferramenta certa e a transparência total.
+                    Do latim <strong>octans</strong>: instrumento de navegação que permitia aos marinheiros determinar sua posição exata nos oceanos. No digital, somos o instrumento que posiciona sua marca com precisão e traça o caminho mais eficiente até os seus resultados.
                   </p>
                 </div>
               </div>

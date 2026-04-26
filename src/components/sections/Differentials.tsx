@@ -21,7 +21,7 @@ export function Differentials() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <h2 className={styles.title}>Por que a Apyra?</h2>
+            <h2 className={styles.title}>Por que a Octant?</h2>
             <p className={styles.subtitle}>
               Substituímos a intuição por engenharia de dados. Nosso foco é a eficiência operacional e o crescimento sustentável, garantindo que cada investimento se transforme em resultado escalável para o seu negócio. Indo muito além de likes e visualizações. Valor no que realmente importa: lucratividade, processos inteligentes e o fortalecimento do valor da sua marca através da inovação.
             </p>

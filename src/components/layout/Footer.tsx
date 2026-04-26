@@ -8,7 +8,7 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <span className={styles.logo}>Apyra<span className={styles.dot}>.</span></span>
+            <span className={styles.logo}>Octant<span className={styles.dot}>.</span></span>
             <span className={styles.description}>
                Transformando presença digital em performance real.
             </span>
@@ -32,7 +32,7 @@ export function Footer() {
         </div>
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Apyra - Mídia Digital. Todos os direitos reservados.
+            © {new Date().getFullYear()} Octant - Mídia Digital. Todos os direitos reservados.
           </p>
         </div>
       </div>

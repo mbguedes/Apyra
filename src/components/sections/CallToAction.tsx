@@ -42,7 +42,7 @@ export function CallToAction() {
               </div>
               <div className={styles.infoItem}>
                 <Send className={styles.infoIcon} size={24} />
-                <span>contato@apyra.com.br</span>
+                <span>contato@octantdigital.com.br</span>
               </div>
             </div>
           </div>

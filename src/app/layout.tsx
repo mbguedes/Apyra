@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Apyra - Mídia Digital | Escale sua marca na era digital",
+  title: "Octant - Mídia Digital | Escale sua marca na era digital",
   description: "Especialistas em Marketing Digital, Gestão de Tráfego, Branding e Performance.",
 };
 

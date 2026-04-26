@@ -29,7 +29,7 @@ export function Header() {
       <div className={styles.container}>
         <div className={styles.logo}>
           <a href="/" onClick={closeMenu}>
-            <span className={styles.apyra}>Apyra</span>
+            <span className={styles.octant}>Octant</span>
             <span className={styles.dot}>.</span>
           </a>
         </div>
@@ -42,7 +42,7 @@ export function Header() {
         </nav>
         
         <div className={styles.actions}>
-          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.cta}>
+          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Octant!" target="_blank" rel="noopener noreferrer" className={styles.cta}>
             <span></span>
             <span></span>
             <span></span>
@@ -72,7 +72,7 @@ export function Header() {
           <Link href="#sobre" className={styles.mobileLink} onClick={closeMenu}>Sobre</Link>
           <Link href="#servicos" className={styles.mobileLink} onClick={closeMenu}>Serviços</Link>
           <Link href="#diferenciais" className={styles.mobileLink} onClick={closeMenu}>Diferenciais</Link>
-          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={closeMenu}>
+          <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Octant!" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={closeMenu}>
             <span></span>
             <span></span>
             <span></span>

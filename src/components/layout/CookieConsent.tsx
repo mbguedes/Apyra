@@ -8,14 +8,14 @@ export function CookieConsent() {
 
   useEffect(() => {
     // Verificamos o local storage apenas no client-side para evitar hydration errors
-    const consent = localStorage.getItem("apyra_cookie_consent");
+    const consent = localStorage.getItem("octant_cookie_consent");
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
 
   const acceptCookies = () => {
-    localStorage.setItem("apyra_cookie_consent", "true");
+    localStorage.setItem("octant_cookie_consent", "true");
     setIsVisible(false);
   };
 

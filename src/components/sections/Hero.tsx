@@ -17,7 +17,7 @@ export function Hero() {
             Aumentamos a Maturidade Digital da sua marca, através de dados, campanhas eficientes, provocações e transparência, trazendo resultados reais em cada etapa do funil.
           </p>
           <div className={styles.actions}>
-            <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Apyra!" target="_blank" rel="noopener noreferrer" className={styles.primaryButton}>
+            <a href="https://wa.me/5511949968105?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Octant!" target="_blank" rel="noopener noreferrer" className={styles.primaryButton}>
               Fale com um Especialista
             </a>
             <Link href="#servicos" className={styles.secondaryButton}>
